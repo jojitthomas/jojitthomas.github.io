@@ -1,0 +1,31 @@
+footer {
+  font-family: $font-sans;
+  #wrapper {
+    height: 130px;
+    text-align: center;
+    h3 {
+      color: $color-low;
+      font-weight: 400;
+      padding-top: 50px;
+      font-size: 12px;
+      a {
+        color: $green;
+      }
+    }
+    div {
+      i.icon {
+        width: 13px;
+        padding: 10px;
+        fill: $color-low;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.fas,
+.fab {
+  color: $color-low;
+  &:hover {
+    color: $green;
+  }
+}

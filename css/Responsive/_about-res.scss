@@ -1,0 +1,168 @@
+@media screen and (max-width: 1200px) {
+  #About {
+    margin-left: 80px;
+    .head {
+      h1 {
+        &::after {
+          right: 270px;
+        }
+      }
+    }
+    .flex {
+      .left {
+        max-width: 350px;
+
+      }
+      .right {
+        width: 300px;
+        height: 400px;
+      }
+      .aboutTechRes2{
+        display: none;
+      }
+    }
+  }
+}
+@media screen and (max-width: 980px) {
+  #About {
+    margin-left: 60px;
+    .head {
+      h1 {
+        &::after {
+          right: 220px;
+        }
+      }
+      .flex {
+        .left {
+          ul {
+            margin-bottom: 50px;
+          }
+          .right {
+            margin-top: 0px;
+            width: 300px;
+            height: 400px;
+            margin: 0 auto;
+          }
+          .aboutTechRes2{
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 872px) {
+  #About {
+    .head {
+      h1 {
+        &::after {
+          width: 200px;
+          right: 160px;
+        }
+      }
+    }
+    .flex {
+      .left {
+        max-width: 400px;
+        ul {
+          margin-bottom: 50px;
+          margin: 0 auto;
+        }
+      }
+      .right {
+        margin-top: 50px;
+        width: 270px;
+        height: 360px;
+        margin: 0;
+      }
+      .aboutTechRes1{
+        display: none;
+      }
+      .aboutTechRes2{
+        display: block;
+        margin-top: 30px;
+        height: 150px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  #About {
+    .head {
+      h1 {
+        &::after {
+          width: 200px;
+          right: 160px;
+        }
+      }
+    }
+    .flex {
+      .left {
+        max-width: 400px;
+        ul {
+          margin-bottom: 50px;
+          margin: 0 auto;
+        }
+      }
+      .right {
+        margin-top: 50px;
+        width: 270px;
+        height: 360px;
+        margin: 0;
+      }
+      .aboutTechRes1{
+        display: none;
+      }
+      .aboutTechRes2{
+        display: block;
+        margin-top: 30px;
+        height: 150px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 650px) {
+  #About {
+    margin-left: 40px;
+    .head {
+      h1 {
+        &::after {
+          display: none;
+        }
+      }
+      .flex {
+        .right {
+          margin-top: 50px;
+          width: 300px;
+          height: 400px;
+          margin: 0 auto;
+        }
+        .aboutTechRes1{
+          display: none;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  #About {
+    margin-left: 0px;
+    .head {
+      h1 {
+        font-size: 20px;
+      }
+    }
+    .flex {
+      .right {
+        margin-top: 50px;
+        width: 270px;
+        height: 360px;
+        margin: 0 auto;
+      }
+      .aboutTechRes1{
+        display: none;
+      }
+      
+    }
+  }
+}

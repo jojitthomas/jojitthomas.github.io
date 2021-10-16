@@ -1,0 +1,169 @@
+#spotlight {
+  header {
+    padding: 10px 10%;
+    margin: 0 auto;
+    font-family: $font-mono;
+    letter-spacing: 2px;
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 10vh;
+    font-size: 16px;
+    nav.left {
+      color: $green;
+      width: 50px;
+      fill: transparent;
+      position: relative;
+      cursor: pointer;
+      width: 50px;
+      height: 50px;
+      padding: 2px 5px;
+      &::before {
+        font-family: sans-serif;
+        content: "J";
+        position: absolute;
+        font-size: 24px;
+        top: 12px;
+        left: 18px;
+      }
+      #logo {
+        width: 40px;
+        .shape {
+          stroke: $green;
+        }
+      }
+      &:focus,
+      &:active {
+        outline: 2px dotted $green;
+      }
+    }
+    nav.right {
+      display: flex;
+      gap: 20px;
+      ul {
+        display: flex;
+        gap: 20px;
+        align-self: center;
+        li {
+          color: $color;
+          span {
+            color: $green;
+            margin-right: 5px;
+          }
+        }
+      }
+      a.nav-button {
+        border: 1px solid $green;
+        padding: 8px 10px;
+        color: $green;
+        border-radius: 3px;
+        &:hover {
+          background-color: $green-tint;
+        }
+      }
+    }
+  }
+  .side-bar-left {
+    position: fixed;
+    left: 8%;
+    bottom: 250px;
+    transition: all 1s ease-in-out;
+    ul {
+      position: relative;
+      li {
+        margin-top: 20px;
+        a {
+          svg {
+            width: 20px;
+            transition: all 0.3s ease-in-out;
+            &:hover {
+              stroke: $green;
+              width: 22px;
+            }
+          }
+        }
+      }
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 190px;
+        left: 10px;
+        width: 2px;
+        height: 190px;
+        background-color: $color-low;
+      }
+    }
+  }
+  .side-bar-right {
+    position: fixed;
+    right: 8%;
+    bottom: 170px;
+    writing-mode: vertical-lr;
+    -webkit-writing-mode: vertical-lr;
+    -ms-writing-mode: vertical-lr;
+    a {
+      font-family: $font-mono;
+      letter-spacing: 3px;
+      color: $color-low;
+      &:hover {
+        color: $green;
+        transform: translateY(-3px);
+      }
+    }
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 320px;
+      right: 10px;
+      width: 2px;
+      height: 150px;
+      background-color: $color-low;
+    }
+  }
+  #main {
+    min-height: 90vh;
+    max-width: 800px;
+    margin-left: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .container {
+      span {
+        color: $green;
+        display: block;
+        margin-bottom: 10px;
+        font-size: 20px;
+        font-family: $font-mono;
+      }
+      h1.Head {
+        font-size: 68px;
+        font-family: $font-sans;
+      }
+      h1.subHead {
+        font-size: 64px;
+        color: $color-low;
+        font-family: $font-sans;
+      }
+      p {
+        font-family: $font-sans;
+        max-width: 500px;
+        margin-top: 30px;
+        color: $color-low;
+      }
+      a.button {
+        font-family: $font-mono;
+        display: inline-block;
+        margin-top: 70px;
+        padding: 15px 15px;
+        font-size: 18px;
+        border-radius: 5px;
+        &:hover {
+          background-color: $green-tint;
+        }
+      }
+    }
+  }
+}

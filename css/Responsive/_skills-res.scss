@@ -1,0 +1,131 @@
+@media screen and (max-width: 1200px) {
+  #Skills {
+    margin-left: 80px;
+    .head {
+      h1 {
+        &::after {
+          right: 220px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 980px) {
+  #Skills {
+    margin-left: 60px;
+    .head {
+      h1 {
+        &::after {
+          right: 160px;
+        }
+      }
+    }
+    .container {
+      max-width: 580px;
+      gap: 10px;
+      .box {
+        &:nth-child(2) {
+          border-right: none;
+        }
+        &:nth-child(3) {
+          border-right: 1px solid $color-low;
+        }
+        &:nth-child(4) {
+          border-right: none;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  #Skills {
+    margin-left: 60px;
+    .head {
+      h1 {
+        &::after {
+          width: 200px;
+          right: 100px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 640px) {
+  #Skills {
+    margin-left: 40px;
+    .head {
+      h1 {
+        &::after {
+          display: none;
+        }
+      }
+    }
+    .container {
+      .box {
+        margin: 20px 5px;
+        width: 150px;
+        &:nth-child(3) {
+          border-right: 1px solid $color-low;
+        }
+        &:nth-child(6) {
+          border-right: none;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  #Skills {
+    margin-left: 0px;
+    .head {
+      h1 {
+        font-size: 20px;
+      }
+    }
+    .container {
+      margin: 0 auto;
+      .box {
+        margin: 20px 5px;
+        padding: 20px;
+        width: 100px;
+        border: none;
+        svg.svg-inline--fa.fa-react.fa-w-16 {
+          margin-bottom: -30px;
+          margin-top: -10px;
+          margin-left: 10px;
+      }
+        &:nth-child(3) {
+          border-right: none;
+        }
+        &:nth-child(6) {
+          border-right: none;
+        }
+        .nodejsIcon{
+          width: 30px;
+        }
+      }
+    }
+  }
+  .ml {
+    margin-left: 0px;
+  }
+}
+@media screen and (max-width: 360px) {
+  #Skills {
+    .container {
+      margin: 0 auto;
+      .box {
+        margin: 20px 5px;
+        padding: 20px;
+        width: 100px;
+        border: none;
+        &:nth-child(3) {
+          border-right: none;
+        }
+        &:nth-child(6) {
+          border-right: none;
+        }
+      }
+    }
+  }
+}

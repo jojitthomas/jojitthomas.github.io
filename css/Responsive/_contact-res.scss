@@ -1,0 +1,78 @@
+@media screen and (max-width: 1200px) {
+  #Contact {
+    .head {
+      h1 {
+        font-size: 26px;
+        span {
+          color: $green;
+        }
+        &::after {
+          right: 220px;
+        }
+      }
+    }
+    h2 {
+      font-size: 38px;
+    }
+    a.button {
+      padding: 15px 23px;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  #Contact {
+    .head {
+      h1 {
+        font-size: 26px;
+        &::after {
+          width: 200px;
+          right: 120px;
+        }
+      }
+    }
+    h2 {
+      font-size: 34px;
+    }
+    a.button {
+      padding: 12px 20px;
+    }
+  }
+}
+@media screen and (max-width: 640px) {
+  #Contact {
+    margin-left: 40px;
+    .head {
+      h1 {
+        font-size: 26px;
+        &::after {
+          display: none;
+        }
+      }
+    }
+    h2 {
+      font-size: 28px;
+    }
+    a.button {
+      padding: 10px 17px;
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  #Contact {
+    margin-left: 0px;
+    .head {
+      h1 {
+        font-size: 20px;
+        &::after {
+          display: none;
+        }
+      }
+    }
+    h2 {
+      font-size: 26px;
+    }
+    a.button {
+      padding: 10px 17px;
+    }
+  }
+}

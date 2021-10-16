@@ -1,0 +1,1264 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+  background-color: #989dac5d;
+  width: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #64ffda;
+  border-radius: 100px;
+  -webkit-transition: 2s ease;
+  transition: 2s ease;
+}
+
+a {
+  text-decoration: none;
+}
+
+a.button {
+  border: 1px solid #64ffda;
+  padding: 5px 10px;
+  color: #64ffda;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+#wrapper {
+  margin: 0 auto;
+  max-width: 80%;
+}
+
+body {
+  background-color: #161b22;
+  color: #dcdde4;
+  position: relative;
+  cursor: url("../images/cursor.svg"), auto;
+}
+
+.clicked {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #64ffda;
+  -webkit-animation: clicked 0.6s linear;
+          animation: clicked 0.6s linear;
+  border-radius: 50%;
+}
+
+.success {
+  font-size: 12px;
+  color: #64ffda;
+}
+
+.error {
+  font-size: 12px;
+  color: red;
+}
+
+a.error {
+  font-size: 15px;
+  margin: 0 auto;
+  background-color: rgba(100, 255, 218, 0.1);
+  width: 70px;
+  color: #64ffda;
+}
+
+#spotlight header {
+  padding: 10px 10%;
+  margin: 0 auto;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  letter-spacing: 2px;
+  padding-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 10vh;
+  font-size: 16px;
+}
+
+#spotlight header nav.left {
+  color: #64ffda;
+  width: 50px;
+  fill: transparent;
+  position: relative;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  padding: 2px 5px;
+}
+
+#spotlight header nav.left::before {
+  font-family: sans-serif;
+  content: "J";
+  position: absolute;
+  font-size: 24px;
+  top: 12px;
+  left: 18px;
+}
+
+#spotlight header nav.left #logo {
+  width: 40px;
+}
+
+#spotlight header nav.left #logo .shape {
+  stroke: #64ffda;
+}
+
+#spotlight header nav.left:focus, #spotlight header nav.left:active {
+  outline: 2px dotted #64ffda;
+}
+
+#spotlight header nav.right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+
+#spotlight header nav.right ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+#spotlight header nav.right ul li {
+  color: #dcdde4;
+}
+
+#spotlight header nav.right ul li span {
+  color: #64ffda;
+  margin-right: 5px;
+}
+
+#spotlight header nav.right a.nav-button {
+  border: 1px solid #64ffda;
+  padding: 8px 10px;
+  color: #64ffda;
+  border-radius: 3px;
+}
+
+#spotlight header nav.right a.nav-button:hover {
+  background-color: rgba(100, 255, 218, 0.1);
+}
+
+#spotlight .side-bar-left {
+  position: fixed;
+  left: 8%;
+  bottom: 250px;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+#spotlight .side-bar-left ul {
+  position: relative;
+}
+
+#spotlight .side-bar-left ul li {
+  margin-top: 20px;
+}
+
+#spotlight .side-bar-left ul li a svg {
+  width: 20px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#spotlight .side-bar-left ul li a svg:hover {
+  stroke: #64ffda;
+  width: 22px;
+}
+
+#spotlight .side-bar-left ul::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 190px;
+  left: 10px;
+  width: 2px;
+  height: 190px;
+  background-color: #a8b2d1;
+}
+
+#spotlight .side-bar-right {
+  position: fixed;
+  right: 8%;
+  bottom: 170px;
+  writing-mode: vertical-lr;
+  -webkit-writing-mode: vertical-lr;
+  -ms-writing-mode: vertical-lr;
+}
+
+#spotlight .side-bar-right a {
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  letter-spacing: 3px;
+  color: #a8b2d1;
+}
+
+#spotlight .side-bar-right a:hover {
+  color: #64ffda;
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+}
+
+#spotlight .side-bar-right::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 320px;
+  right: 10px;
+  width: 2px;
+  height: 150px;
+  background-color: #a8b2d1;
+}
+
+#spotlight #main {
+  min-height: 90vh;
+  max-width: 800px;
+  margin-left: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#spotlight #main .container span {
+  color: #64ffda;
+  display: block;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+}
+
+#spotlight #main .container h1.Head {
+  font-size: 68px;
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+}
+
+#spotlight #main .container h1.subHead {
+  font-size: 64px;
+  color: #a8b2d1;
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+}
+
+#spotlight #main .container p {
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+  max-width: 500px;
+  margin-top: 30px;
+  color: #a8b2d1;
+}
+
+#spotlight #main .container a.button {
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  display: inline-block;
+  margin-top: 70px;
+  padding: 15px 15px;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+#spotlight #main .container a.button:hover {
+  background-color: rgba(100, 255, 218, 0.1);
+}
+
+#About {
+  margin-left: 60px;
+}
+
+#About .head {
+  margin-top: 100px;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+#About .head h1 {
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  font-size: 26px;
+}
+
+#About .head h1 span {
+  color: #64ffda;
+}
+
+#About .head h1::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 300px;
+  height: 1px;
+  background-color: #989dac5d;
+  top: 15px;
+  right: 520px;
+}
+
+#About .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#About .flex .left, #About .flex .aboutTechRes2 {
+  max-width: 500px;
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+  color: #a8b2d1;
+}
+
+#About .flex .left p, #About .flex .aboutTechRes2 p {
+  margin-bottom: 20px;
+}
+
+#About .flex .left h6, #About .flex .aboutTechRes2 h6 {
+  font-size: 22px;
+}
+
+#About .flex .left ul, #About .flex .aboutTechRes2 ul {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 290px;
+  margin-bottom: 150px;
+}
+
+#About .flex .left ul li, #About .flex .aboutTechRes2 ul li {
+  padding: 5px;
+  font-size: 18px;
+  position: relative;
+  width: 140px;
+}
+
+#About .flex .left ul li::before, #About .flex .aboutTechRes2 ul li::before {
+  content: ">";
+  margin-right: 5px;
+  color: #64ffda;
+  font-weight: 900;
+}
+
+#About .flex .right {
+  width: 300px;
+  height: 400px;
+  border: 1px solid #64ffda;
+  margin: 0 auto;
+  -webkit-animation: wave 1s linear infinite alternate;
+          animation: wave 1s linear infinite alternate;
+}
+
+#About .flex .right .aboutRightImg {
+  width: 90%;
+  height: 93%;
+  margin: 5%;
+}
+
+#Skills {
+  margin-left: 60px;
+  margin-bottom: 100px;
+}
+
+#Skills .head {
+  margin-top: 100px;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+#Skills .head h1 {
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  font-size: 26px;
+}
+
+#Skills .head h1 span {
+  color: #64ffda;
+}
+
+#Skills .head h1::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 300px;
+  height: 1px;
+  background-color: #989dac5d;
+  top: 15px;
+  right: 460px;
+}
+
+#Skills .container {
+  margin-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 800px;
+  margin: 0 auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  gap: 20px;
+}
+
+#Skills .container .box {
+  margin: 50px 10px;
+  margin-left: 30px;
+  height: 100px;
+  width: 200px;
+  border-right: 1px solid #a8b2d1;
+}
+
+#Skills .container .box .alignNode {
+  margin-bottom: -30px;
+}
+
+#Skills .container .box .svg-inline--fa {
+  fill: #a8b2d1;
+  width: 50px;
+  display: block;
+}
+
+#Skills .container .box .svg-inline--fa:hover {
+  fill: #64ffda;
+}
+
+#Skills .container .box:nth-child(3) {
+  border-right: none;
+}
+
+#Skills .container .box:nth-child(6) {
+  border-right: none;
+}
+
+#Skills .container .box h2 {
+  text-align: justify;
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+  font-size: 18px;
+}
+
+#Skills .container .box h2:hover {
+  color: #64ffda;
+}
+
+#Skills .ml {
+  margin-left: 10px;
+}
+
+#Contact {
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+  text-align: center;
+  margin-left: 60px;
+  min-height: 80vh;
+}
+
+#Contact .head {
+  text-align: start;
+  margin-top: 100px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+#Contact .head h1 {
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  font-size: 26px;
+}
+
+#Contact .head h1 span {
+  color: #64ffda;
+}
+
+#Contact .head h1::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 300px;
+  height: 1px;
+  background-color: #989dac5d;
+  top: 15px;
+  right: 470px;
+}
+
+#Contact h2 {
+  margin-bottom: 30px;
+  font-size: 38px;
+}
+
+#Contact p {
+  margin: 0 auto;
+  max-width: 500px;
+  margin-bottom: 18px;
+}
+
+#Contact a.button {
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  padding: 15px 28px;
+  font-size: 18px;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 20px 0;
+  font-weight: 600;
+}
+
+#Contact a.button:hover {
+  background-color: rgba(100, 255, 218, 0.1);
+}
+
+#Contact form.contact {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 500px;
+}
+
+#Contact form.contact input,
+#Contact form.contact textarea,
+#Contact form.contact button {
+  padding: 10px 10px;
+  background-color: #21262d;
+  border: none;
+  outline: none;
+  margin: 10px 0;
+  color: #fff;
+  border-radius: 5px;
+}
+
+#Contact form.contact .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#Contact form.contact button {
+  margin: 5px;
+  width: 50%;
+}
+
+#Contact form.contact button:hover {
+  color: #64ffda;
+  background-color: rgba(100, 255, 218, 0.1);
+}
+
+#Contact form.contact .captcha {
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  text-decoration: line-through;
+  color: #64ffda;
+}
+
+#Contact form.contact .captchaDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#Contact form.contact .captchaDiv .captcha input {
+  color: cyan;
+  text-decoration: line-through;
+}
+
+#Contact form.contact .captchaDiv .captcha ::-webkit-input-placeholder {
+  color: cyan;
+}
+
+#Contact form.contact .captchaDiv .captcha :-ms-input-placeholder {
+  color: cyan;
+}
+
+#Contact form.contact .captchaDiv .captcha ::-ms-input-placeholder {
+  color: cyan;
+}
+
+#Contact form.contact .captchaDiv .captcha ::placeholder {
+  color: cyan;
+}
+
+#Contact form.contact .captchaDiv div {
+  width: 50%;
+  margin: 5px;
+}
+
+#Contact form.contact .captchaDiv input {
+  width: 100%;
+}
+
+footer {
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+}
+
+footer #wrapper {
+  height: 130px;
+  text-align: center;
+}
+
+footer #wrapper h3 {
+  color: #a8b2d1;
+  font-weight: 400;
+  padding-top: 50px;
+  font-size: 12px;
+}
+
+footer #wrapper h3 a {
+  color: #64ffda;
+}
+
+footer #wrapper div i.icon {
+  width: 13px;
+  padding: 10px;
+  fill: #a8b2d1;
+  cursor: pointer;
+}
+
+.fas,
+.fab {
+  color: #a8b2d1;
+}
+
+.fas:hover,
+.fab:hover {
+  color: #64ffda;
+}
+
+@media screen and (min-width: 1080px) {
+  #spotlight header {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    background-color: #1d2126;
+  }
+  #spotlight #main .container span {
+    margin-top: 80px;
+    font-size: 28px;
+  }
+  #spotlight #main .container h1.Head {
+    font-size: 64px;
+  }
+  #spotlight #main .container h1.subHead {
+    font-size: 54px;
+  }
+  #spotlight #main .container a.button {
+    padding: 13px 14px;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  #spotlight header {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    background-color: #1d2126;
+  }
+  #spotlight #main .container span {
+    font-size: 24px;
+  }
+  #spotlight #main .container h1.Head {
+    font-size: 56px;
+  }
+  #spotlight #main .container h1.subHead {
+    font-size: 54px;
+  }
+  #spotlight #main .container a.button {
+    padding: 13px 14px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  #spotlight header {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    background-color: #1d2126;
+  }
+  #spotlight #main .container span {
+    font-size: 20px;
+  }
+  #spotlight #main .container h1.Head {
+    font-size: 48px;
+  }
+  #spotlight #main .container h1.subHead {
+    font-size: 44px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #spotlight header {
+    font-size: 12px;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    background-color: #1d2126;
+  }
+  #spotlight header nav.left {
+    width: 40px;
+    height: 40px;
+  }
+  #spotlight header nav.left::before {
+    font-size: 18px;
+    top: 10px;
+    left: 13px;
+  }
+  #spotlight header nav.left #logo {
+    width: 30px;
+  }
+  #spotlight #main .container h1.Head {
+    font-size: 46px;
+  }
+  #spotlight #main .container h1.subHead {
+    font-size: 36px;
+  }
+  #spotlight #main .container a.button {
+    padding: 12px 13px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  #spotlight header {
+    width: 100%;
+    font-size: 10px;
+    position: fixed;
+    z-index: 1;
+    background-color: #1d2126;
+  }
+  #spotlight .side-bar-left {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+    -webkit-writing-mode: vertical-lr;
+        -ms-writing-mode: tb-lr;
+            writing-mode: vertical-lr;
+  }
+  #spotlight .side-bar-left ul {
+    position: relative;
+  }
+  #spotlight .side-bar-left ul li {
+    padding: 0 10px;
+  }
+  #spotlight .side-bar-left ul::after {
+    content: "";
+    display: none;
+  }
+  #spotlight .side-bar-right {
+    display: none;
+  }
+  #spotlight #main {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  #spotlight #main .container h1.Head {
+    font-size: 42px;
+  }
+  #spotlight #main .container h1.subHead {
+    font-size: 28px;
+  }
+  #spotlight #main .container a.button {
+    padding: 12px 13px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #spotlight .overlay {
+    position: fixed;
+    background-color: #1d2126;
+    -webkit-filter: blur(5px);
+            filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+    z-index: 1;
+    opacity: 0;
+  }
+  #spotlight .overlay.open {
+    opacity: 1;
+    width: 100%;
+    height: 100vh;
+  }
+  #spotlight header {
+    padding-top: 20px;
+    position: fixed;
+    width: 100%;
+    background-color: #1d2126;
+    z-index: 2;
+  }
+  #spotlight header .humburger {
+    position: absolute;
+    top: 30px;
+    right: 10%;
+    cursor: pointer;
+    z-index: 3;
+    text-align: right;
+    text-align: -webkit-right;
+  }
+  #spotlight header .humburger .line {
+    margin-top: 5px;
+    height: 2px;
+    background-color: #64ffda;
+  }
+  #spotlight header .humburger .line:nth-child(1) {
+    width: 30px;
+  }
+  #spotlight header .humburger .line:nth-child(2) {
+    width: 20px;
+  }
+  #spotlight header .humburger .line:nth-child(3) {
+    width: 10px;
+  }
+  #spotlight header .humburger.open {
+    display: none;
+  }
+  #spotlight header nav.right {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    padding: 50px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    background-color: #0d1117;
+    opacity: 0;
+    pointer-events: none;
+  }
+  #spotlight header nav.right ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #spotlight header nav.right ul li {
+    font-size: 16px;
+  }
+  #spotlight header nav.right ul li span {
+    display: block;
+    margin-right: 5px;
+  }
+  #spotlight header nav.right a.nav-button {
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+    width: 100px;
+  }
+  #spotlight header nav.right.open {
+    opacity: 1;
+    pointer-events: all;
+    overflow: hidden;
+  }
+  #spotlight #main {
+    max-width: 900px;
+    margin-left: 0px;
+  }
+  #spotlight #main .container span {
+    font-size: 18px;
+  }
+  #spotlight #main .conatinerspotlight {
+    margin-top: 100px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #About {
+    margin-left: 80px;
+  }
+  #About .head h1::after {
+    right: 270px;
+  }
+  #About .flex .left {
+    max-width: 350px;
+  }
+  #About .flex .right {
+    width: 300px;
+    height: 400px;
+  }
+  #About .flex .aboutTechRes2 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  #About {
+    margin-left: 60px;
+  }
+  #About .head h1::after {
+    right: 220px;
+  }
+  #About .head .flex .left ul {
+    margin-bottom: 50px;
+  }
+  #About .head .flex .left .right {
+    margin-top: 0px;
+    width: 300px;
+    height: 400px;
+    margin: 0 auto;
+  }
+  #About .head .flex .left .aboutTechRes2 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 872px) {
+  #About .head h1::after {
+    width: 200px;
+    right: 160px;
+  }
+  #About .flex .left {
+    max-width: 400px;
+  }
+  #About .flex .left ul {
+    margin-bottom: 50px;
+    margin: 0 auto;
+  }
+  #About .flex .right {
+    margin-top: 50px;
+    width: 270px;
+    height: 360px;
+    margin: 0;
+  }
+  #About .flex .aboutTechRes1 {
+    display: none;
+  }
+  #About .flex .aboutTechRes2 {
+    display: block;
+    margin-top: 30px;
+    height: 150px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #About .head h1::after {
+    width: 200px;
+    right: 160px;
+  }
+  #About .flex .left {
+    max-width: 400px;
+  }
+  #About .flex .left ul {
+    margin-bottom: 50px;
+    margin: 0 auto;
+  }
+  #About .flex .right {
+    margin-top: 50px;
+    width: 270px;
+    height: 360px;
+    margin: 0;
+  }
+  #About .flex .aboutTechRes1 {
+    display: none;
+  }
+  #About .flex .aboutTechRes2 {
+    display: block;
+    margin-top: 30px;
+    height: 150px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  #About {
+    margin-left: 40px;
+  }
+  #About .head h1::after {
+    display: none;
+  }
+  #About .head .flex .right {
+    margin-top: 50px;
+    width: 300px;
+    height: 400px;
+    margin: 0 auto;
+  }
+  #About .head .flex .aboutTechRes1 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #About {
+    margin-left: 0px;
+  }
+  #About .head h1 {
+    font-size: 20px;
+  }
+  #About .flex .right {
+    margin-top: 50px;
+    width: 270px;
+    height: 360px;
+    margin: 0 auto;
+  }
+  #About .flex .aboutTechRes1 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #Skills {
+    margin-left: 80px;
+  }
+  #Skills .head h1::after {
+    right: 220px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  #Skills {
+    margin-left: 60px;
+  }
+  #Skills .head h1::after {
+    right: 160px;
+  }
+  #Skills .container {
+    max-width: 580px;
+    gap: 10px;
+  }
+  #Skills .container .box:nth-child(2) {
+    border-right: none;
+  }
+  #Skills .container .box:nth-child(3) {
+    border-right: 1px solid #a8b2d1;
+  }
+  #Skills .container .box:nth-child(4) {
+    border-right: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #Skills {
+    margin-left: 60px;
+  }
+  #Skills .head h1::after {
+    width: 200px;
+    right: 100px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  #Skills {
+    margin-left: 40px;
+  }
+  #Skills .head h1::after {
+    display: none;
+  }
+  #Skills .container .box {
+    margin: 20px 5px;
+    width: 150px;
+  }
+  #Skills .container .box:nth-child(3) {
+    border-right: 1px solid #a8b2d1;
+  }
+  #Skills .container .box:nth-child(6) {
+    border-right: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #Skills {
+    margin-left: 0px;
+  }
+  #Skills .head h1 {
+    font-size: 20px;
+  }
+  #Skills .container {
+    margin: 0 auto;
+  }
+  #Skills .container .box {
+    margin: 20px 5px;
+    padding: 20px;
+    width: 100px;
+    border: none;
+  }
+  #Skills .container .box svg.svg-inline--fa.fa-react.fa-w-16 {
+    margin-bottom: -30px;
+    margin-top: -10px;
+    margin-left: 10px;
+  }
+  #Skills .container .box:nth-child(3) {
+    border-right: none;
+  }
+  #Skills .container .box:nth-child(6) {
+    border-right: none;
+  }
+  #Skills .container .box .nodejsIcon {
+    width: 30px;
+  }
+  .ml {
+    margin-left: 0px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  #Skills .container {
+    margin: 0 auto;
+  }
+  #Skills .container .box {
+    margin: 20px 5px;
+    padding: 20px;
+    width: 100px;
+    border: none;
+  }
+  #Skills .container .box:nth-child(3) {
+    border-right: none;
+  }
+  #Skills .container .box:nth-child(6) {
+    border-right: none;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #Contact .head h1 {
+    font-size: 26px;
+  }
+  #Contact .head h1 span {
+    color: #64ffda;
+  }
+  #Contact .head h1::after {
+    right: 220px;
+  }
+  #Contact h2 {
+    font-size: 38px;
+  }
+  #Contact a.button {
+    padding: 15px 23px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #Contact .head h1 {
+    font-size: 26px;
+  }
+  #Contact .head h1::after {
+    width: 200px;
+    right: 120px;
+  }
+  #Contact h2 {
+    font-size: 34px;
+  }
+  #Contact a.button {
+    padding: 12px 20px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  #Contact {
+    margin-left: 40px;
+  }
+  #Contact .head h1 {
+    font-size: 26px;
+  }
+  #Contact .head h1::after {
+    display: none;
+  }
+  #Contact h2 {
+    font-size: 28px;
+  }
+  #Contact a.button {
+    padding: 10px 17px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #Contact {
+    margin-left: 0px;
+  }
+  #Contact .head h1 {
+    font-size: 20px;
+  }
+  #Contact .head h1::after {
+    display: none;
+  }
+  #Contact h2 {
+    font-size: 26px;
+  }
+  #Contact a.button {
+    padding: 10px 17px;
+  }
+}
+
+@-webkit-keyframes clicked {
+  0% {
+    opacity: 0;
+    width: 8px;
+    height: 8px;
+    background-color: transparent;
+  }
+  50% {
+    opacity: 1;
+    width: 14px;
+    height: 14px;
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+  100% {
+    opacity: 0;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(100, 255, 218, 0.1);
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+  }
+}
+
+@keyframes clicked {
+  0% {
+    opacity: 0;
+    width: 8px;
+    height: 8px;
+    background-color: transparent;
+  }
+  50% {
+    opacity: 1;
+    width: 14px;
+    height: 14px;
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+  100% {
+    opacity: 0;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(100, 255, 218, 0.1);
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+  }
+}
+/*# sourceMappingURL=style.css.map */

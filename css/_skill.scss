@@ -1,0 +1,75 @@
+#Skills {
+  margin-left: 60px;
+  margin-bottom: 100px;
+  .head {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    position: relative;
+    h1 {
+      font-family: $font-mono;
+      font-size: 26px;
+      span {
+        color: $green;
+      }
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 300px;
+        height: 1px;
+        background-color: $color-extreme-low;
+        top: 15px;
+        right: 460px;
+      }
+    }
+  }
+  .container {
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 20px;
+
+    .box {
+      margin: 50px 10px;
+      margin-left: 30px;
+      height: 100px;
+      width: 200px;
+      border-right: 1px solid $color-low;
+
+      .alignNode{
+        margin-bottom: -30px;
+      }
+      
+      .svg-inline--fa {
+        fill: $color-low;
+        width: 50px;
+        display: block;
+        
+        &:hover {
+          fill: $green;
+        }
+      }
+      &:nth-child(3) {
+        border-right: none;
+      }
+      &:nth-child(6) {
+        border-right: none;
+      }
+      h2 {
+        text-align: justify;
+        font-family: $font-sans;
+        font-size: 18px;
+        &:hover {
+          color: $green;
+        }
+      }
+    }
+  }
+  .ml {
+    margin-left: 10px;
+  }
+}
