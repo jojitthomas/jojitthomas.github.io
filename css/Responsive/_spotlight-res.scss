@@ -7,13 +7,12 @@ $color-low: #a8b2d1;
 $color-extreme-low: #989dac5d;
 $headerColor: #1d2126;
 $green-tint: rgba(100, 255, 218, 0.1);
-$font-sans: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system,
-  system-ui, sans-serif;
+$font-sans: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
 $font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
 
 @media screen and (min-width: 1080px) {
   #spotlight {
-    header{
+    header {
       position: fixed;
       z-index: 1;
       width: 100%;
@@ -21,7 +20,7 @@ $font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
     }
     #main {
       .container {
-        span{
+        span {
           margin-top: 80px;
           font-size: 28px;
         }
@@ -40,7 +39,7 @@ $font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
 }
 @media screen and (max-width: 1080px) {
   #spotlight {
-    header{
+    header {
       position: fixed;
       z-index: 1;
       width: 100%;
@@ -48,7 +47,7 @@ $font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
     }
     #main {
       .container {
-        span{
+        span {
           font-size: 24px;
         }
         h1.Head {
@@ -66,7 +65,7 @@ $font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
 }
 @media screen and (max-width: 980px) {
   #spotlight {
-    header{
+    header {
       position: fixed;
       z-index: 1;
       width: 100%;
@@ -74,7 +73,7 @@ $font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
     }
     #main {
       .container {
-        span{
+        span {
           font-size: 20px;
         }
         h1.Head {
@@ -259,9 +258,8 @@ $font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
         span {
           font-size: 18px;
         }
-
       }
-      .conatinerspotlight{
+      .conatinerspotlight {
         margin-top: 100px;
       }
     }

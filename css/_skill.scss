@@ -40,15 +40,15 @@
       width: 200px;
       border-right: 1px solid $color-low;
 
-      .alignNode{
+      .alignNode {
         margin-bottom: -30px;
       }
-      
+
       .svg-inline--fa {
         fill: $color-low;
         width: 50px;
         display: block;
-        
+
         &:hover {
           fill: $green;
         }

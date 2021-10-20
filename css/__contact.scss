@@ -52,55 +52,54 @@
     display: flex;
     flex-direction: column;
     max-width: 500px;
-    input,
-    textarea,
-    button {
-      padding: 10px 10px;
-      background-color: $VeryLightbalck;
-      border: none;
-      outline: none;
-      margin: 10px 0;
-      color: #fff;
-      border-radius: 5px;
+  }
+  input,
+  textarea,
+  button {
+    padding: 10px 10px;
+    background-color: $VeryLightbalck;
+    border: none;
+    outline: none;
+    margin: 10px 0;
+    color: #fff;
+    border-radius: 5px;
+  }
+  .buttons {
+    display: flex;
+  }
+  button {
+    margin: 5px;
+    width: 50%;
+    &:hover {
+      color: $green;
+      background-color: $green-tint;
     }
-    .buttons {
-      display: flex;
-    }
-    button {
-      margin: 5px;
-      width: 50%;
-      &:hover {
-        color: $green;
-        background-color: $green-tint;
+  }
+  .captcha {
+    pointer-events: none;
+    user-select: none;
+    text-decoration: line-through;
+    color: $green;
+  }
+  .captchaDiv {
+    display: flex;
+    flex-direction: row;
+
+    .captcha {
+      input {
+        color: $aqua;
+        text-decoration: line-through;
+      }
+      ::placeholder {
+        color: $aqua;
       }
     }
-    .captcha{
-    
-      pointer-events: none;
-      user-select: none;
-      text-decoration: line-through;
-      color: $green;
+    div {
+      width: 50%;
+      margin: 5px;
     }
-    .captchaDiv{
-      display: flex;
-      flex-direction: row;
-      
-      .captcha{
-        input{
-          color: $aqua;
-          text-decoration: line-through;
-        }
-        ::placeholder {
-          color: $aqua;
-        }
-        }
-        div{
-          width: 50%;
-          margin: 5px;
-        }
-        input{
-          width: 100%;
-        }
+    input {
+      width: 100%;
     }
   }
 }

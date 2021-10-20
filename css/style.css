@@ -6,7 +6,7 @@ html {
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body::-webkit-scrollbar {
@@ -54,7 +54,7 @@ body {
   height: 20px;
   border: 2px solid #64ffda;
   -webkit-animation: clicked 0.6s linear;
-          animation: clicked 0.6s linear;
+  animation: clicked 0.6s linear;
   border-radius: 50%;
 }
 
@@ -86,11 +86,11 @@ a.error {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   min-height: 10vh;
   font-size: 16px;
 }
@@ -123,7 +123,8 @@ a.error {
   stroke: #64ffda;
 }
 
-#spotlight header nav.left:focus, #spotlight header nav.left:active {
+#spotlight header nav.left:focus,
+#spotlight header nav.left:active {
   outline: 2px dotted #64ffda;
 }
 
@@ -140,7 +141,7 @@ a.error {
   display: flex;
   gap: 20px;
   -ms-flex-item-align: center;
-      align-self: center;
+  align-self: center;
 }
 
 #spotlight header nav.right ul li {
@@ -219,7 +220,7 @@ a.error {
 #spotlight .side-bar-right a:hover {
   color: #64ffda;
   -webkit-transform: translateY(-3px);
-          transform: translateY(-3px);
+  transform: translateY(-3px);
 }
 
 #spotlight .side-bar-right::after {
@@ -241,11 +242,11 @@ a.error {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 #spotlight #main .container span {
@@ -322,42 +323,48 @@ a.error {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
-#About .flex .left, #About .flex .aboutTechRes2 {
+#About .flex .left,
+#About .flex .aboutTechRes2 {
   max-width: 500px;
   font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
   color: #a8b2d1;
 }
 
-#About .flex .left p, #About .flex .aboutTechRes2 p {
+#About .flex .left p,
+#About .flex .aboutTechRes2 p {
   margin-bottom: 20px;
 }
 
-#About .flex .left h6, #About .flex .aboutTechRes2 h6 {
+#About .flex .left h6,
+#About .flex .aboutTechRes2 h6 {
   font-size: 22px;
 }
 
-#About .flex .left ul, #About .flex .aboutTechRes2 ul {
+#About .flex .left ul,
+#About .flex .aboutTechRes2 ul {
   margin-top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   max-width: 290px;
   margin-bottom: 150px;
 }
 
-#About .flex .left ul li, #About .flex .aboutTechRes2 ul li {
+#About .flex .left ul li,
+#About .flex .aboutTechRes2 ul li {
   padding: 5px;
   font-size: 18px;
   position: relative;
   width: 140px;
 }
 
-#About .flex .left ul li::before, #About .flex .aboutTechRes2 ul li::before {
+#About .flex .left ul li::before,
+#About .flex .aboutTechRes2 ul li::before {
   content: ">";
   margin-right: 5px;
   color: #64ffda;
@@ -370,7 +377,7 @@ a.error {
   border: 1px solid #64ffda;
   margin: 0 auto;
   -webkit-animation: wave 1s linear infinite alternate;
-          animation: wave 1s linear infinite alternate;
+  animation: wave 1s linear infinite alternate;
 }
 
 #About .flex .right .aboutRightImg {
@@ -416,15 +423,15 @@ a.error {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   max-width: 800px;
   margin: 0 auto;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   gap: 20px;
 }
 
@@ -538,8 +545,8 @@ a.error {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   max-width: 500px;
 }
 
@@ -574,9 +581,9 @@ a.error {
 #Contact form.contact .captcha {
   pointer-events: none;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   text-decoration: line-through;
   color: #64ffda;
 }
@@ -587,8 +594,8 @@ a.error {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 #Contact form.contact .captchaDiv .captcha input {
@@ -763,10 +770,10 @@ footer #wrapper div i.icon {
     bottom: 100px;
     left: 50%;
     -webkit-transform: translate(-50%);
-            transform: translate(-50%);
+    transform: translate(-50%);
     -webkit-writing-mode: vertical-lr;
-        -ms-writing-mode: tb-lr;
-            writing-mode: vertical-lr;
+    -ms-writing-mode: tb-lr;
+    writing-mode: vertical-lr;
   }
   #spotlight .side-bar-left ul {
     position: relative;
@@ -783,8 +790,8 @@ footer #wrapper div i.icon {
   }
   #spotlight #main {
     -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
   #spotlight #main .container h1.Head {
     font-size: 42px;
@@ -802,9 +809,9 @@ footer #wrapper div i.icon {
     position: fixed;
     background-color: #1d2126;
     -webkit-filter: blur(5px);
-            filter: blur(5px);
+    filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-            backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
     z-index: 1;
     opacity: 0;
   }
@@ -855,10 +862,10 @@ footer #wrapper div i.icon {
     padding: 50px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -ms-flex-pack: distribute;
-        justify-content: space-around;
+    justify-content: space-around;
     background-color: #0d1117;
     opacity: 0;
     pointer-events: none;
@@ -866,8 +873,8 @@ footer #wrapper div i.icon {
   #spotlight header nav.right ul {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
   #spotlight header nav.right ul li {
     font-size: 16px;
@@ -1226,7 +1233,7 @@ footer #wrapper div i.icon {
     width: 14px;
     height: 14px;
     -webkit-transform: translateY(-50px);
-            transform: translateY(-50px);
+    transform: translateY(-50px);
   }
   100% {
     opacity: 0;
@@ -1234,7 +1241,7 @@ footer #wrapper div i.icon {
     height: 20px;
     background-color: rgba(100, 255, 218, 0.1);
     -webkit-transform: translateY(-100px);
-            transform: translateY(-100px);
+    transform: translateY(-100px);
   }
 }
 
@@ -1250,7 +1257,7 @@ footer #wrapper div i.icon {
     width: 14px;
     height: 14px;
     -webkit-transform: translateY(-50px);
-            transform: translateY(-50px);
+    transform: translateY(-50px);
   }
   100% {
     opacity: 0;
@@ -1258,7 +1265,7 @@ footer #wrapper div i.icon {
     height: 20px;
     background-color: rgba(100, 255, 218, 0.1);
     -webkit-transform: translateY(-100px);
-            transform: translateY(-100px);
+    transform: translateY(-100px);
   }
 }
 /*# sourceMappingURL=style.css.map */
