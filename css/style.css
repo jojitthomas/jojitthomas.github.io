@@ -77,7 +77,7 @@ a.error {
 }
 
 #spotlight header {
-  padding: 10px 10%;
+  padding: 10px 8%;
   margin: 0 auto;
   font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
   letter-spacing: 2px;
@@ -550,9 +550,9 @@ a.error {
   max-width: 500px;
 }
 
-#Contact form.contact input,
-#Contact form.contact textarea,
-#Contact form.contact button {
+#Contact input,
+#Contact textarea,
+#Contact button {
   padding: 10px 10px;
   background-color: #21262d;
   border: none;
@@ -562,23 +562,23 @@ a.error {
   border-radius: 5px;
 }
 
-#Contact form.contact .buttons {
+#Contact .buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-#Contact form.contact button {
+#Contact button {
   margin: 5px;
   width: 50%;
 }
 
-#Contact form.contact button:hover {
+#Contact button:hover {
   color: #64ffda;
   background-color: rgba(100, 255, 218, 0.1);
 }
 
-#Contact form.contact .captcha {
+#Contact .captcha {
   pointer-events: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -588,7 +588,7 @@ a.error {
   color: #64ffda;
 }
 
-#Contact form.contact .captchaDiv {
+#Contact .captchaDiv {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -598,33 +598,33 @@ a.error {
   flex-direction: row;
 }
 
-#Contact form.contact .captchaDiv .captcha input {
+#Contact .captchaDiv .captcha input {
   color: cyan;
   text-decoration: line-through;
 }
 
-#Contact form.contact .captchaDiv .captcha ::-webkit-input-placeholder {
+#Contact .captchaDiv .captcha ::-webkit-input-placeholder {
   color: cyan;
 }
 
-#Contact form.contact .captchaDiv .captcha :-ms-input-placeholder {
+#Contact .captchaDiv .captcha :-ms-input-placeholder {
   color: cyan;
 }
 
-#Contact form.contact .captchaDiv .captcha ::-ms-input-placeholder {
+#Contact .captchaDiv .captcha ::-ms-input-placeholder {
   color: cyan;
 }
 
-#Contact form.contact .captchaDiv .captcha ::placeholder {
+#Contact .captchaDiv .captcha ::placeholder {
   color: cyan;
 }
 
-#Contact form.contact .captchaDiv div {
+#Contact .captchaDiv div {
   width: 50%;
   margin: 5px;
 }
 
-#Contact form.contact .captchaDiv input {
+#Contact .captchaDiv input {
   width: 100%;
 }
 

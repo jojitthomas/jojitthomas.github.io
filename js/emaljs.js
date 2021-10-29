@@ -24,4 +24,3 @@ function validation(valid) {
     alert("Captcha Wrong")
   }
 }
-

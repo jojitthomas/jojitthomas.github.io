@@ -76,12 +76,46 @@ function removeSpaces(string) {
 function func() {
   Captcha();
   userAgent();
+
 }
+
+let date;
+//Time
+function startTime() {
+  const today = new Date();
+  let h = today.getHours();
+  let m = today.getMinutes();
+  let s = today.getSeconds();
+  let onlyDate = today.getDate();
+  let year = today.getFullYear();
+  let month = today.getMonth() + 1;
+  date = (onlyDate + "/" + month + "/" + year);
+  m = checkTime(m);
+  s = checkTime(s);
+  if (h == 0) {
+    h = 12
+    session = "a.m.";
+  }
+
+  if (h > 12) {
+    h = h - 12;
+    session = "p.m.";
+  }
+  var Time = h + ":" + m + ":" + s + " " + session;
+  return Time;
+  setTimeout(startTime, 1000)
+}
+
+function checkTime(i) {
+  if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
+  return i;
+}
+
 
 //user agent
 function userAgent() {
-  var user = "User-agent : " + navigator.userAgent;
-  console.log(user);
+  Time = startTime();
+  var user = { Date: date, Time: Time, UserAgent: navigator.userAgent, Cookies: navigator.cookieEnabled };
   $.ajax({
     type: "POST",
     url: "https://script.google.com/macros/s/AKfycbyXB8v7_nVQ09vOMNKz0c5GRNHWkyUWegNsx3aG1sui6Wsa4eInIoNxCwX4lzEE78A/exec",
@@ -91,4 +125,26 @@ function userAgent() {
       // console.log("success")
     }
   });
+}
+
+
+var elem = document.getElementById("image");
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
+}
+
+function closeFullscreen() {
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.webkitExitFullscreen) { /* Safari */
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) { /* IE11 */
+    document.msExitFullscreen();
+  }
 }
